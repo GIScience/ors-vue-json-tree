@@ -181,4 +181,8 @@
   .json-tree-value-null {
     color: #c7444a;
   }
+  
+  .json-tree-key {
+    word-break: initial;
+  }
 </style>
