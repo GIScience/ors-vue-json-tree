@@ -4,4 +4,4 @@ machine:
 
 compile:
   override:
-    - npm run dist
+    - npm run build

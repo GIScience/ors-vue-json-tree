@@ -1,10 +1,10 @@
-var path = require('path')
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var Uglify = require("uglifyjs-webpack-plugin")
+const path = require('path');
+const {VueLoaderPlugin} = require('vue-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: {
     app: './src/index.js'
   },
@@ -28,21 +28,21 @@ module.exports = {
         options: {
           sourceMap: false
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader'
+        ]
       }
     ]
   },
   plugins: [
-    new Uglify({
-      compress: {
-        warnings: false
-      },
-      sourceMap: false
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+        filename: 'json-tree.css'
     }),
-    new ExtractTextPlugin('json-tree.css'),
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: {
-        safe: true
-      }
-    })
+    new OptimizeCSSPlugin()
   ]
 }
