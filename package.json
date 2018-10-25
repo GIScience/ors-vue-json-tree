@@ -1,11 +1,12 @@
 {
-  "name": "vue-json-tree",
+  "name": "ors-vue-json-tree",
   "description": "Vue component that renders JSON data in a collapsible tree structure.",
   "version": "0.4.0",
-  "author": "Leo Deng",
+  "author": "Openrouteservice, Leo Deng",
   "license": "MIT",
-  "homepage": "https://github.com/myst729/vue-json-tree",
+  "homepage": "https://github.com/GIScience/ors-vue-json-tree",
   "keywords": [
+    "ors",
     "vue",
     "json",
     "tree"
@@ -45,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myst729/vue-json-tree.git"
+    "url": "git+https://github.com/GIScience/ors-vue-json-tree.git"
   },
   "bugs": {
-    "url": "https://github.com/myst729/vue-json-tree/issues"
+    "url": "https://github.com/GIScience/ors-vue-json-tree/issues"
   }
 }
