@@ -76,10 +76,7 @@ export default {
     created () {
         this.expanded = this.parsed.depth < this.level
     },
-    updated () {
-        this.$emit('JsonTreeRendered')
-    },
     mounted () {
-        this.$emit('JsonTreeRendered')
+        this.$emit('jsonTreeRendered')
     }
 }
